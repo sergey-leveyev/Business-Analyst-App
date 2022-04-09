@@ -17,6 +17,7 @@ const app = express();
 dbConnect();
 
 app.use(passport.initialize());
+require("./middleware/passport")(passport);
 
 app.use(morgan("dev"));
 app.use(cors());
